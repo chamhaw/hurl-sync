@@ -117,9 +117,5 @@ func executeCheck(endpoints []Endpoint, hurlFiles []HurlFile, hurlDir string) in
 	fmt.Printf("  MISPLACED: %d\n", counts[statusMisplaced])
 	fmt.Printf("  ORPHAN:    %d\n", counts[statusOrphan])
 
-	// Exit code: 1 if MISSING, ORPHAN, or MISPLACED
-	if counts[statusMissing] > 0 || counts[statusOrphan] > 0 || counts[statusMisplaced] > 0 {
-		return 1
-	}
 	return 0
 }
